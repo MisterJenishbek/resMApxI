@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+            width: 60px;
+            height: 60px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        table {
+            border-spacing: 0px;
+            border-collapse: collapse;
+            /* margin: auto; */
+        }
+
+        .title {
+            width: 125px;
+            height: fit-content;
+            border: 1px solid black;
+            /* margin: 10px auto; */
+            text-align: center;
+        }
+
+        .main {
+            width: 300px;
+            height: fit-content;
+            /* margin: auto; */
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div>
+            <div class="title">РИСУНОК</div>
+            <table>
+                <tr>
+                    <td>0</td>
+                    <td id="pic0"></td>
+                </tr>
+                <tr>
+                    <td>1-10</td>
+                    <td id="pic1"></td>
+                </tr>
+                <tr>
+                    <td>11-20</td>
+                    <td id="pic2"></td>
+                </tr>
+                <tr>
+                    <td>21-30</td>
+                    <td id="pic3"></td>
+                </tr>
+                <tr>
+                    <td>31-40</td>
+                    <td id="pic4"></td>
+                </tr>
+                <tr>
+                    <td>41-50</td>
+                    <td id="pic5"></td>
+                </tr>
+                <tr>
+                    <td>51-60</td>
+                    <td id="pic6"></td>
+                </tr>
+                <tr>
+                    <td>61-70</td>
+                    <td id="pic7"></td>
+                </tr>
+                <tr>
+                    <td>71-80</td>
+                    <td id="pic8"></td>
+                </tr>
+                <tr>
+                    <td>81-90</td>
+                    <td id="pic9"></td>
+                </tr>
+                <tr>
+                    <td>91-100</td>
+                    <td id="pic10"></td>
+                </tr>
+            </table>
+        </div>
+        <div>
+            <div class="title">КОМПОЗИЦИЯ</div>
+            <table>
+                <tr>
+                    <td>0</td>
+                    <td id="kom0"></td>
+                </tr>
+                <tr>
+                    <td>1-10</td>
+                    <td id="kom1"></td>
+                </tr>
+                <tr>
+                    <td>11-20</td>
+                    <td id="kom2"></td>
+                </tr>
+                <tr>
+                    <td>21-30</td>
+                    <td id="kom3"></td>
+                </tr>
+                <tr>
+                    <td>31-40</td>
+                    <td id="kom4"></td>
+                </tr>
+                <tr>
+                    <td>41-50</td>
+                    <td id="kom5"></td>
+                </tr>
+                <tr>
+                    <td>51-60</td>
+                    <td id="kom6"></td>
+                </tr>
+                <tr>
+                    <td>61-70</td>
+                    <td id="kom7"></td>
+                </tr>
+                <tr>
+                    <td>71-80</td>
+                    <td id="kom8"></td>
+                </tr>
+                <tr>
+                    <td>81-90</td>
+                    <td id="kom9"></td>
+                </tr>
+                <tr>
+                    <td>91-100</td>
+                    <td id="kom10"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <script>
+        let Pic0 = 0, Pic1 = 0, Pic2 = 0, Pic3 = 0, Pic4 = 0, Pic5 = 0, Pic6 = 0, Pic7 = 0, Pic8 = 0, Pic9 = 0, Pic10 = 0;
+        let Kom0 = 0, Kom1 = 0, Kom2 = 0, Kom3 = 0, Kom4 = 0, Kom5 = 0, Kom6 = 0, Kom7 = 0, Kom8 = 0, Kom9 = 0, Kom10 = 0;
+        let ResPic = `70 60 50 50 5 50 55 20 70 25 60 60 40 25 45 80 15 20 25 15 50 45 5 50 20 20 5 70 35 35 55 75 65 60 25 20 30 30 20 20 5 40 15 45 40 30 45 60 30 60 65 55 20 0 75 50 0 0 55 30 65 60 10 70 85 35 60 40 0 45 40 55 10 15 75 70 80 75 65 70 60 55 75 60 65 75 60 80 75 80 65 65 75 45 80 75 65 50 75 0 60 0 85 45 70 40 35 40 0 15 15 75 45 85 30 70 60 0 20 50 35 15 50 40 55 35 45 20 70 40 70 65 80 65 55 70 70 20 85 60 0 75 60 25 30 30 65 55 70 30 45 55 35 25 30 60 25 75 15 30 50 75 50 40 60 90 0 65 60 50 70 45 35 65 20 15 75 5 15 60 45 45 20 65 35 20 45 40 65 65 15 55 35 35 20 40 5 20 30 30 15 45 50 75 35 20 30 65 45 35 70 20 30 80 65 35 70 10 30 20 40 0 0 40 65 30 30 75 45 55 55 1 65 45 25 75 30 5 40 30 30 70 40 20 40 25 65 20 60 35 40 35 35 35 45 20 55 20 40 30 55 20 20 20 10 25 15 5 45 40 50 45 40 45 70 55 30 15 40 45 55 15 35 45 20 75 30 50 45 20 35 10 20 35 65 40 0 15 25 60 25 45 80 5 30 40 25 20 40 0 30 20 35 0 5 20 35 50 5 30 40 50 20 10 75 35 55 35 60 50 45 45 75 5 20 15 40 25 55 40 15 35 15 15 50 20 60 45 40 70 65 35 45 65 15 1 15 5 55 0 35 35 45 5 35 45 50 35 10 25 20 25 45 25 15 20 1 30 5 65 30 65 35 15 15 35 70 65 35 35 30 75 20 50 25 15 35 5 50 5 65 60 60 45 80 45 55 15 35 15 20 60 5 45 30 70 20 5 35 35 5 55 15 30 20 35 40 15 5 35 15 5 10 25 20 30 35 35 25 5 40 0 20 5 30 65 20 35 40 20 30 50 40 20 20 0 30 10 40 80 35 0 20 50 0 55 35 35 15 35 30 30 30 45 30 30 15 1 65 65 35 15 40 15 15 80 5 20 30 50 40 1 5 50 45 15 30 5 35 65 55 10 0 60 60 10 0 5 50 35 5 55 35 1 15 40 40 5 30 15 25 20 55 45 20 15 20 70 20 15 35 5 35 55 75 65 20 5 15 20 20 20 20 0 55 70 5 10 15 75 40 30 20 70 0 40 20 50 35 20 0 5 0 15 80 20 30 25 55 0 20 20 30 30 20 10 1 10 45 40 50 30 35 35 60 60 15 10 5 0 50 20 15 65 5 15 5 35 60 70 30 35 5 35 0 35 20 35 55 45 40 15 65 35 10 25 45 55 20 5 10 10 20 20 5 15 20 60 45 0 0 0 15 45 30 25 20 5 75 25 30 30 0 55 10 15 10 20 0 35 35 20 30 10 55 50 45 30 45 10 40 40 75 40 5 45 10 45 30 1 50 0 30 30 70 10 30 0 0 35 70 0 20 65 20 15 1 15 30 40 65 45 40 65 15 15 30 0 0 55 10 5 0 0 35 50 60 35 15 75 30 25 45 15 65 60 0 25 70 70 65 40 60 60 30 40 35 0 20 0 15 15 0 5 30 0 20 0 30 30 15 45 5 50 15 50 20 70 30 65 60 20 0 15 0 45 0 0 60 65 10 10 55 35 0 45 15 70 30 70 75 10 20 1 20 5 15 10 50 5 50 70 75 15 0 30 35 45 15 15 1 10 15 30 10 40 10 0 25 35 55 5 15 15 1 50 15 1 15 5 10 0 15 5 50 65 10 45 5 0 0 55 0 0 0 15 15 0 20 45 20 5 10 15 0 0 15 15 40 5 0 0 5 30 15 10 0 0 1 0 15 0 1 5 0 85 0 5 5`;
+        let ResKom = `60 75 20 60 5 40 55 15 55 20 50 45 20 10 40 85 15 20 45 15 40 45 1 30 15 35 5 45 50 20 55 75 30 40 15 20 10 10 30 15 5 35 20 45 45 30 50 60 25 45 50 50 20 0 65 45 0 0 65 25 65 50 10 55 50 20 40 25 0 45 45 50 15 20 85 75 85 70 65 75 65 60 75 80 75 80 75 80 75 85 60 75 70 45 85 75 55 55 80 0 65 0 85 45 65 40 35 40 0 15 15 75 15 85 20 50 55 0 15 60 30 30 45 15 50 30 60 60 75 40 75 65 85 75 55 75 75 30 75 70 0 65 45 25 25 35 75 60 60 50 30 55 40 20 30 60 25 65 5 25 60 80 45 40 70 70 0 75 60 40 70 45 50 75 30 10 75 10 20 60 60 45 15 65 35 20 40 35 55 60 1 50 30 30 25 50 10 15 25 25 20 40 35 80 35 15 30 50 40 25 75 25 30 65 50 30 60 10 40 25 40 0 0 55 65 55 10 80 40 50 30 1 70 25 30 75 20 5 20 25 30 75 15 20 35 20 55 30 65 45 45 40 50 35 40 30 45 15 40 50 50 45 20 30 10 25 5 5 45 40 20 45 25 70 55 50 25 15 25 60 55 15 25 45 20 70 30 30 50 15 25 10 15 35 65 45 0 15 20 60 20 45 70 10 35 10 20 15 30 0 35 15 40 0 10 15 40 55 5 20 40 50 15 10 55 25 50 50 60 50 45 65 75 10 20 15 50 15 45 45 10 40 30 15 45 15 55 35 40 75 75 25 40 70 15 1 10 5 25 0 30 35 50 1 45 40 30 40 10 20 10 15 40 20 15 20 1 20 5 55 40 55 40 15 15 40 55 40 20 20 15 70 15 45 20 15 45 5 50 5 65 55 60 40 80 35 50 15 10 10 15 50 15 30 20 70 15 5 40 35 10 50 15 20 20 30 30 20 5 25 15 5 10 15 15 15 30 40 20 10 30 0 15 5 20 65 25 20 40 15 25 50 35 15 15 0 20 5 45 70 35 0 15 55 0 50 15 40 15 20 30 20 35 45 35 35 25 1 45 65 30 20 35 15 10 80 5 20 60 40 40 1 10 40 20 15 25 5 35 65 50 5 0 60 40 10 0 5 50 30 10 45 20 1 25 45 45 5 20 20 15 20 45 40 30 15 15 50 30 15 50 5 25 40 75 65 30 5 15 20 20 15 15 0 40 40 5 15 35 75 40 30 15 75 0 30 20 45 30 5 0 5 0 15 80 25 20 40 55 0 20 20 20 25 15 15 1 5 45 40 40 25 20 50 50 50 15 15 10 0 50 15 20 45 5 20 5 20 40 50 30 45 5 35 0 35 5 35 45 30 40 15 60 30 5 15 40 40 25 10 15 15 15 15 5 10 15 65 30 0 0 0 20 40 40 25 15 5 75 15 35 40 0 50 5 15 5 15 0 40 20 20 15 5 40 40 40 20 45 10 40 40 75 50 5 40 15 50 25 1 45 0 30 20 50 1 20 0 0 30 50 0 20 55 15 15 1 15 20 45 75 40 40 50 15 10 20 0 0 45 15 1 0 0 35 45 60 20 15 70 10 25 45 15 60 50 0 45 65 50 55 40 65 60 25 40 20 0 15 0 15 15 0 1 30 0 20 0 25 30 20 35 1 45 10 40 15 60 15 60 15 20 0 15 0 15 0 0 55 60 10 5 55 20 0 40 15 65 25 75 70 5 20 1 5 5 15 10 45 5 45 65 75 15 0 20 25 40 15 15 1 10 10 25 15 35 10 0 15 5 45 1 10 15 1 65 15 1 15 5 10 0 15 15 45 70 10 40 5 0 0 55 0 0 0 15 15 0 30 40 15 5 10 10 0 0 15 15 40 5 0 0 1 25 15 10 0 0 1 0 10 0 1 5 0 85 0 5 5`;
+        let ArrResPic = ResPic.split(' ');
+        let ArrResKom = ResKom.split(' ');
+        let NumOfPast = 0, NumOfFailed = 0;
+        for (let i = 0; i < ArrResPic.length; i++) {
+            if (ArrResPic[i] == 0) {
+                Pic0++;
+            } else if (ArrResPic[i] <= 10) {
+                Pic1++;
+            } else if (ArrResPic[i] <= 20) {
+                Pic2++;
+            } else if (ArrResPic[i] <= 30) {
+                Pic3++;
+            } else if (ArrResPic[i] <= 40) {
+                Pic4++;
+            } else if (ArrResPic[i] <= 50) {
+                Pic5++;
+            } else if (ArrResPic[i] <= 60) {
+                Pic6++;
+            } else if (ArrResPic[i] <= 70) {
+                Pic7++;
+            } else if (ArrResPic[i] <= 80) {
+                Pic8++;
+            } else if (ArrResPic[i] <= 90) {
+                Pic9++;
+            } else
+                if (ArrResPic[i] <= 100) {
+                    Pic10++;
+                }
+        }
+
+        document.querySelector('#pic0').innerHTML = Pic0;
+        document.querySelector('#pic1').innerHTML = Pic1;
+        document.querySelector('#pic2').innerHTML = Pic2;
+        document.querySelector('#pic3').innerHTML = Pic3;
+        document.querySelector('#pic4').innerHTML = Pic4;
+        document.querySelector('#pic5').innerHTML = Pic5;
+        document.querySelector('#pic6').innerHTML = Pic6;
+        document.querySelector('#pic7').innerHTML = Pic7;
+        document.querySelector('#pic8').innerHTML = Pic8;
+        document.querySelector('#pic9').innerHTML = Pic9;
+        document.querySelector('#pic10').innerHTML = Pic10;
+
+        for (let j = 0; j < ArrResKom.length; j++) {
+            if (ArrResKom[j] == 0) {
+                Kom0++;
+            } else if (ArrResKom[j] <= 10) {
+                Kom1++;
+            } else if (ArrResKom[j] <= 20) {
+                Kom2++;
+            } else if (ArrResKom[j] <= 30) {
+                Kom3++;
+            } else if (ArrResKom[j] <= 40) {
+                Kom4++;
+            } else if (ArrResKom[j] <= 50) {
+                Kom5++;
+            } else if (ArrResKom[j] <= 60) {
+                Kom6++;
+            } else if (ArrResKom[j] <= 70) {
+                Kom7++;
+            } else if (ArrResKom[j] <= 80) {
+                Kom8++;
+            } else if (ArrResKom[j] <= 90) {
+                Kom9++;
+            } else
+                if (ArrResKom[j] <= 100) {
+                    Kom10++;
+                }
+        }
+
+        document.querySelector('#kom0').innerHTML = Kom0;
+        document.querySelector('#kom1').innerHTML = Kom1;
+        document.querySelector('#kom2').innerHTML = Kom2;
+        document.querySelector('#kom3').innerHTML = Kom3;
+        document.querySelector('#kom4').innerHTML = Kom4;
+        document.querySelector('#kom5').innerHTML = Kom5;
+        document.querySelector('#kom6').innerHTML = Kom6;
+        document.querySelector('#kom7').innerHTML = Kom7;
+        document.querySelector('#kom8').innerHTML = Kom8;
+        document.querySelector('#kom9').innerHTML = Kom9;
+        document.querySelector('#kom10').innerHTML = Kom10;
+
+        for (let q = 0; q < ArrResKom.length; q++) {
+            if (ArrResPic[q] > 19 && ArrResKom[q] > 19) {
+                NumOfPast++;
+            } else NumOfFailed++;
+        }
+        document.writeln('<br>Всего: ', ArrResKom.length, '<br>Прошли: ', NumOfPast, '<br>Не прошли: ', NumOfFailed - 72, '(+72)*<br><small>*неявка<small>')
+    </script>
+</body>
+
+</html>
